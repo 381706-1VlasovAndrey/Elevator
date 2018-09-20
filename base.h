@@ -1,6 +1,7 @@
 // класс базового лифта
 #pragma once
 #include <iostream>
+#include <stdexcept>
 using namespace std;
 
 class base
@@ -13,8 +14,12 @@ protected:
 //	double height;	// габариты высота, м
 	int floor_now;	// текущий этаж
 	bool check;		// true - если рабочий, false - если сломан
-	double weight_max;	// максимальный вес
-//	double speed;	// скорость, этаж/с
+	double weight_max;		// максимальный вес
+//	double speed;			// скорость, этаж/с
+
+	void open_door();		// открыть двери
+	bool check_weight_max();// проверить на перевес
+	void close_door();		// закрыть двери
 	
 public:
 	base();
@@ -22,9 +27,6 @@ public:
 //	int check_floor_now();	// выдать текущее состояние
 	void call();			// вызвать лифт
 	void motion(int floor);	// движение лифта(+рандом застрял ли)
-	void open_door();		// открыть двери
-	bool check_weight_max();// проверить на перевес
-	void close_door();		// закрыть двери
- 	void in_floor();		// действия на этаже
+	void in_floor();		// действия на этаже
 //	~base();				// деструктор 
 };
