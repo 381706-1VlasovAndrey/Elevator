@@ -2,6 +2,7 @@
 #pragma once
 #include <iostream>
 #include <stdexcept>
+#include <vector>
 using namespace std;
 
 class base
@@ -16,6 +17,11 @@ protected:
 	bool check;		// true - если рабочий, false - если сломан
 	double weight_max;		// максимальный вес
 //	double speed;			// скорость, этаж/с
+
+		bool door;		// состояние дверей (true = открыты)
+		double weight;	// текущий вес
+		vector<int> callstack; // на какие этажи вызывали
+		bool overload; //перегрузка
 
 	void open_door();		// открыть двери
 	bool check_weight_max();// проверить на перевес
