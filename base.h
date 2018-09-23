@@ -23,7 +23,7 @@ protected:
 		bool overload; //перегрузка
 
 	void open_door();		// открыть двери
-	bool check_weight_max();// проверить на перевес
+	void check_weight_max();// проверить на перевес
 	void close_door();		// закрыть двери
 	
 public:
