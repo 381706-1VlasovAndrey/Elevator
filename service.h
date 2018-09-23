@@ -6,6 +6,6 @@ class service : public base
 public:
 	service();
 	void button_close();	// дождатьс€ нажати€ кнопки дл€ закрыти€ дверей
-	bool check_weight_max();// проверить на перевес и на закрытие кнопки
+	void check_weight_max();// проверить на перевес и на закрытие кнопки
 	void in_floor();		// действи€ на этаже
 };

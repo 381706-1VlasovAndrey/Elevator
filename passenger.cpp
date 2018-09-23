@@ -2,11 +2,17 @@
 
 bool passenger::check_weight_max()
 {
-	// do
-	//			запросить вес, сказать, что это примерно (вес/80) человек
-	// пока (вес не меньше максимального)
-	// do
-	//			ВЫ УБРАЛИ ГОЛОВЫ?
-	//  пока (не уберут)
+	while (overload) {
+		cout << "Overload: " << weight - weight_max << "kg ("<< ceil((weight - weight_max)/80) << " men)" << endl << "Enter the weight loss";
+		double loss;
+		cin >> loss;
+		weight -= loss;
+		if (weight <= weight_max) overload = false;
+	}
+	int pob;
+	do {
+		cout << "How many parts of the body are between the doors?" << endl;
+		cin >> pob;
+	} while (pob);
 	return true;
 }

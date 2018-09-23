@@ -20,7 +20,6 @@ protected:
 
 		bool door;		// состояние дверей (true = открыты)
 		double weight;	// текущий вес
-		vector<int> callstack; // на какие этажи вызывали
 		bool overload; //перегрузка
 
 	void open_door();		// открыть двери

@@ -51,6 +51,7 @@ void base::close_door()
 
 void base::in_floor()
 {
+	// БЕРЁШЬ И КОПИРУЕШЬ ИЗ SERVICE (только с "подождать")
 	// открыть двери
 	// if (check_weight_max()); // если так можно вообще ))0)
 	// закрыть двери
